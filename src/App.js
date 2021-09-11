@@ -32,7 +32,7 @@ function Working2WithAnimatedStyle() {
   return (
     <Animated.View style={[style, styles.box]}>
       <Pressable style={{ flex: 1 }} onPressIn={() => pressedValue.value = 1} onPressOut={() => pressedValue.value = 0} >
-        <Text selectable={false} style={styles.text}>Animated.View component (Pressed me)</Text>
+        <Text selectable={false} style={styles.text}>Animated.View component (Press to fade)</Text>
       </Pressable>
     </Animated.View>
   );
@@ -57,7 +57,7 @@ function Fail2WithFalsyStyleArrayItem() {
     // undefined or false or null etc.
     <Animated.View style={[styles.box, style, undefined]}>
       <Pressable style={{ flex: 1 }} onPressIn={() => pressedValue.value = 1} onPressOut={() => pressedValue.value = 0} >
-        <Text selectable={false} style={styles.text}>Animated.View component (Pressed me)</Text>
+        <Text selectable={false} style={styles.text}>Animated.View component (Press to fade)</Text>
       </Pressable>
     </Animated.View>
   );
