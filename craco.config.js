@@ -10,6 +10,7 @@ module.exports = {
       add: [new webpack.DefinePlugin({ __DEV__: true })],
     },
     configure(webpackConfig) {
+      webpackConfig.module.rules[1].oneOf[2].options.cacheDirectory = false;
       webpackConfig.module.rules.push({
         test: /\.js$/,
         include: [path.resolve("node_modules/react-native-reanimated")],
